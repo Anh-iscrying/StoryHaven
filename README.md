@@ -38,7 +38,7 @@ Hỗ trợ trực tuyến: Nhằm giải quyết nhanh các vấn đề của kh
 
 1. Giao diện và Trải nghiệm Người dùng
 
-Thiết kế tối giản, trực quan.
+- Thiết kế tối giản, trực quan.
 
 - Thanh tìm kiếm hỗ trợ gợi ý thông minh và tìm kiếm nhanh.
 
@@ -58,7 +58,7 @@ Thiết kế tối giản, trực quan.
 
 4. Hỗ trợ Khách hàng
 
-Hỗ trợ trực tuyến qua email và số hotline.
+- Hỗ trợ trực tuyến qua email và số hotline.
 
 5. Quản trị viên (Admin)
 
