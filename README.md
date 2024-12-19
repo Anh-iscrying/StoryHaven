@@ -68,7 +68,7 @@ Hỗ trợ trực tuyến: Nhằm giải quyết nhanh các vấn đề của kh
 
 ## Công nghệ sử dụng
 
-Giao diện: HTML, CSS, JavaScript (ReactJS)
+Giao diện: HTML, CSS, JavaScript (ReactJS), PHP, Laravel
 
 Cơ sở dữ liệu: MySQL
 
