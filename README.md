@@ -16,7 +16,7 @@ Chúng tôi nhận thấy nhu cầu đọc truyện trực tuyến ngày càng t
 
 3. Khuyến khích sáng tạo và giao lưu cộng đồng: độc giả có thể viết và chia sẻ truyện của mình với cộng đồng.
 
-4. Cung cấp trải nghiệm đọc truyện liền mạch, không quảng cáo gây phiền nhiễu, với các tùy chọn đọc trực tuyến hoặc ngoại tuyến.
+4. Cung cấp trải nghiệm đọc truyện liền mạch, không quảng cáo gây phiền nhiễu.
 
 ## Tính mới, tính sáng tạo
 
@@ -25,8 +25,6 @@ Cá nhân hóa nội dung: Hệ thống đề xuất truyện dựa trên lịch
 Chế độ đọc thông minh: Hỗ trợ điều chỉnh kích thước chữ, màu nền, và chế độ đọc ban đêm.
 
 Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải truyện, nhận phản hồi, và xây dựng cộng đồng độc giả riêng.
-
-Đọc ngoại tuyến: Tải truyện về thiết bị để đọc mà không cần kết nối Internet.
 
 ## Team Members
 
