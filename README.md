@@ -1,32 +1,32 @@
-# BookHaven
+# StoryHaven
 
-## Tên dự án: Book Haven
+## Tên dự án: Story Haven
 
-Chúng ta có thể hiểu đơn giản là đây chính là thiên đường của những người yêu sách.
+Story Haven là nơi lý tưởng cho những người yêu thích đọc truyện, nơi họ có thể tìm kiếm, đọc, và chia sẻ các tác phẩm yêu thích mọi lúc, mọi nơi.
 
 ## Motivation - WHY
 
-Chúng tôi nhận thấy nhu cầu mua sắm sách trực tuyến ngày càng gia tăng, đặc biệt trong bối cảnh cuộc sống bận rộn khi khách hàng cần một nền tảng tiện lợi và đáng tin cậy. BookHaven ra đời nhằm cung cấp một giải pháp mua sắm sách trực tuyến tích hợp nhiều tính năng hiện đại và mang lại trải nghiệm cá nhân hóa cho người dùng.
+Chúng tôi nhận thấy nhu cầu đọc truyện trực tuyến ngày càng tăng cao, đặc biệt trong bối cảnh các nền tảng truyền thống không thể đáp ứng đầy đủ nhu cầu đa dạng của độc giả. Story Haven được tạo ra để trở thành một không gian lý tưởng cho những người yêu truyện, với các tính năng hiện đại, cá nhân hóa và dễ sử dụng.
 
 ## Mục tiêu
 
-Xây dựng một nền tảng bán sách trực tuyến với giao diện đơn giản, dễ sử dụng và phù hợp với mọi đối tượng khách hàng.
+1. Xây dựng nền tảng đọc truyện trực tuyến với giao diện đẹp mắt, dễ sử dụng, thu hút độc giả ở mọi lứa tuổi.
 
-Tích hợp tính năng cá nhân hóa như lưu danh sách yêu thích, theo dõi đơn hàng, và gợi ý sách dựa trên sở thích cá nhân.
+2. Hỗ trợ cá nhân hóa trải nghiệm đọc truyện: lưu danh sách truyện yêu thích, theo dõi tiến độ đọc, và gợi ý truyện phù hợp.
 
-Đem lại độ tin cậy cao về chất lượng sách và dịch vụ hậu mãi.
+3. Khuyến khích sáng tạo và giao lưu cộng đồng: độc giả có thể viết và chia sẻ truyện của mình với cộng đồng.
 
-Cung cấp nhiều phương thức thanh toán đa dạng, tiện lợi nhằm tăng khả năng tiếp cận người dùng.
+4. Cung cấp trải nghiệm đọc truyện liền mạch, không quảng cáo gây phiền nhiễu, với các tùy chọn đọc trực tuyến hoặc ngoại tuyến.
 
 ## Tính mới, tính sáng tạo
 
-Thanh tìm kiếm thông minh: Tìm kiếm theo tên sách, tác giả, thể loại, và từ khóa liên quan.
+Cá nhân hóa nội dung: Hệ thống đề xuất truyện dựa trên lịch sử đọc và đánh giá của người dùng.
 
-Cá nhân hóa trải nghiệm: Hệ thống đề xuất sách theo lịch sử mua sắm và thích.
+Chế độ đọc thông minh: Hỗ trợ điều chỉnh kích thước chữ, màu nền, và chế độ đọc ban đêm.
 
-Theo dõi thời gian thực: Tích hợp tính năng theo dõi đơn hàng và trạng thái giao hàng trên giao diện.
+Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải truyện, nhận phản hồi, và xây dựng cộng đồng độc giả riêng.
 
-Hỗ trợ trực tuyến: Nhằm giải quyết nhanh các vấn đề của khách hàng.
+Đọc ngoại tuyến: Tải truyện về thiết bị để đọc mà không cần kết nối Internet.
 
 ## Team Members
 
@@ -34,44 +34,52 @@ Hỗ trợ trực tuyến: Nhằm giải quyết nhanh các vấn đề của kh
 
 - Mai Phương Anh
 
+- Lê Văn Hiếu
+
+- Nguyễn Tấn Dũng
+
 ## Tính năng
 
 1. Giao diện và Trải nghiệm Người dùng
 
 - Thiết kế tối giản, trực quan.
 
-- Thanh tìm kiếm hỗ trợ gợi ý thông minh và tìm kiếm nhanh.
+- Thanh tìm kiếm hỗ trợ gợi ý thông minh theo tên truyện, tác giả, và thể loại.
 
-- Phân loại và Tổ chức Sách
+2. Phân loại và Tổ chức Sách
 
-- Danh mục rõ ràng, phân loại theo thể loại, tác giả, và đánh giá.
+- Phân loại theo thể loại (lãng mạn, phiêu lưu, kinh dị, v.v.), độ dài, và đánh giá.
 
-- Hệ thống đánh giá và bình luận sách từ người dùng.
+- Hệ thống đánh giá và bình luận truyện từ người dùng.
 
-3. Tính năng Mua hàng và Thanh toán
+3. Chế độ Đọc và Quản lý Nội dung
 
-- Giỏ hàng: Thêm sách, quản lý danh sách yêu thích.
+- Hỗ trợ chế độ đọc trực tuyến và ngoại tuyến.
 
-- Thanh toán đa dạng: Chuyển khoản ngân hàng, thanh toán khi nhận hàng (COD).
+- Tùy chỉnh trải nghiệm đọc: kích thước chữ, font chữ, chế độ nền sáng/tối.
 
-- Theo dõi đơn hàng: Cập nhật trạng thái và lịch sử giao dịch chi tiết.
+- Hiển thị tiến độ đọc và chương tiếp theo.
 
-4. Hỗ trợ Khách hàng
+4. Cộng đồng và Sáng tạo Nội dung
 
-- Hỗ trợ trực tuyến qua email và số hotline.
+- Người dùng có thể tự viết và đăng truyện.
+
+- Hệ thống đánh giá và bình luận để tương tác với các tác giả.
 
 5. Quản trị viên (Admin)
 
-- Quản lý danh mục sách, người dùng, và đơn hàng.
+- Quản lý danh mục truyện, người dùng.
 
--  Cập nhật khuyến mãi, theo dõi báo cáo doanh thu.
+- Thống kê truy cập và báo cáo xu hướng đọc.
 
 ## Công nghệ sử dụng
 
-Giao diện: HTML, CSS, JavaScript (ReactJS), PHP, Laravel
+Giao diện: HTML, CSS, JavaScript (ReactJS)
+
+Back-end: PHP, Laravel
 
 Cơ sở dữ liệu: MySQL
 
 ## Kết luận
 
-BookHaven hướng đến việc trở thành nền tảng mua sắm sách trực tuyến hàng đầu, mang đến cho khách hàng trải nghiệm hiện đại, đáng nhớ, và đáng tin cậy. Với những tính năng nổi bật và đội ngũ tận tâm, chúng tôi tin tưởng dự án sẽ đáp ứng được kỳ vọng và nhu cầu của mọi đối tượng người dùng.
+Story Haven hứa hẹn sẽ trở thành một nền tảng đọc truyện trực tuyến hàng đầu, cung cấp cho độc giả trải nghiệm đọc truyện hiện đại, thú vị và gần gũi. Với sự đổi mới trong cách tổ chức nội dung và khuyến khích sáng tạo, dự án không chỉ phục vụ độc giả mà còn là nơi kết nối và phát triển cộng đồng những người yêu truyện.
