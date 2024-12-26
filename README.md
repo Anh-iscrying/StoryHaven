@@ -70,8 +70,6 @@ Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải tru
 
 - Quản lý danh mục truyện, người dùng.
 
-- Thống kê truy cập và báo cáo xu hướng đọc.
-
 ## Công nghệ sử dụng
 
 Giao diện: HTML, CSS, JavaScript (ReactJS)
