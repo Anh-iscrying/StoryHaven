@@ -72,7 +72,7 @@ Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải tru
 
 Giao diện: HTML, CSS, JavaScript (ReactJS)
 
-Back-end: PHP, Laravel
+Back-end: PHP
 
 Cơ sở dữ liệu: MySQL
 
