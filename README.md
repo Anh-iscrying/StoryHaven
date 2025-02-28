@@ -70,9 +70,7 @@ Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải tru
 
 ## Công nghệ sử dụng
 
-Giao diện: HTML, CSS, JavaScript (ReactJS)
-
-Back-end: PHP
+Giao diện: HTML, CSS, JavaScript
 
 Cơ sở dữ liệu: MySQL
 
