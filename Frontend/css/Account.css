@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-.container {
+body .container1 {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -15,23 +15,14 @@ body {
 }
 
 /* Header */
-.header {
-  background-color: #fff;
+body .navbar {
+  background-color: white;
   border-bottom: 1px solid #eee;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: transparent;
-  border-bottom: none;
-  position: static;
-  margin: 0;
-  padding: 0;
+  z-index: 1000; 
 }
 
 .navbar-brand img {
@@ -43,17 +34,32 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .d-flex .nav-link {
-  padding: 0.5rem 0.75rem;
+/* Tìm kiếm */
+.navbar .search-form {
+  width: 100%;
+  max-width: 300px; 
 }
 
-.rounded-circle {
-  border-radius: 50% !important;
+.navbar .form-control{
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: #f8f9fa;
 }
 
-.dropdown-menu-end {
-  right: 0;
-  left: auto;
+.navbar .btn-outline-success{
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  background: #f8f9fa;
+  color: gray;
+}
+
+.navbar .btn-outline-success:hover{
+  border: none;
+  outline: none;
+  background: #f8f9fa;
+  color: gray;
 }
 
 /* Profile */

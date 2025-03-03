@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../css/Library.css">
 </head>
 <body>
-
-    <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -32,16 +30,26 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Đăng tác phẩm</a>
+                        <a class="nav-link" href="My_story.html">Tác phẩm của tôi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Thư viện</a>
+                        <a class="nav-link" href="Library.html">Thư viện</a>
                     </li>
                 </ul>
                 <form class="d-flex search-form">
                     <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
                 </form>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/schwi.png" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 5px;">
+                        <span id="profileName"></span> 
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAccount">
+                        <li><a class="dropdown-item" href="Account.html">Hồ sơ của tôi</a></li>
+                        <li><a class="dropdown-item" href="ĐN.html">Đăng xuất</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -49,15 +57,15 @@
     <div class="container related-stories">
         <h2>Thư viện</h2>
         <div class="row">
-            <a class="col-6 col-md-3 mb-3">
+            <a href="Story_information.html" class="col-6 col-md-3 mb-3">
                 <div class="card">
-                    <img src="images/manhphi.jpg" class="card-img-top" alt="Related Story">
+                    <img src="../images/manhphi.jpg" class="card-img-top" alt="Related Story">
                     <div class="card-body">
                         <h5 class="card-title">Manh Phi Tập Kích: Gấu Trúc Trên Trời Rơi Xuống</h5>
                     </div>
                 </div>
             </a>
-            <a class="col-6 col-md-3 mb-3">
+            <a href="Story_information.html" class="col-6 col-md-3 mb-3">
                 <div class="card">
                     <img src="../images/manhphi.jpg" class="card-img-top" alt="Related Story">
                     <div class="card-body">

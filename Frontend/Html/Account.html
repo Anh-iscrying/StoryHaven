@@ -10,57 +10,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="../images/Book Haven (2).png" alt="Story Haven"></a>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="nav-link"><i class="fas fa-search"></i> Tìm kiếm</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">Thể loại</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Comedy</a></li>
-                                    <li><a class="dropdown-item" href="#">Drama</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Thư viện</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/Story Haven.png" alt="Story Haven">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Thể loại
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#">Drama</a></li>
                         </ul>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownWrite" role="button" data-bs-toggle="dropdown" aria-expanded="false">Viết</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownWrite">
-                                <li><a class="dropdown-item" href="#">Viết một truyện mới</a></li>
-                                <li><a class="dropdown-item" href="#">Truyện của tôi</a></li>
-                            </ul>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../images/schwi.png" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 5px;">
-                                <span id="profileName"></span> 
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAccount">
-                                <li><a class="dropdown-item" href="#">Hồ sơ của tôi</a></li>
-                                <li><a class="dropdown-item" href="#">Hộp thư</a></li>
-                                <li><a class="dropdown-item" href="#">Thông báo</a></li>
-                                <li><a class="dropdown-item" href="#">Thư viện</a></li>
-                                <li><a class="dropdown-item" href="#">Ngôn ngữ: Tiếng Việt</a></li>
-                                <li><a class="dropdown-item" href="#">Trợ giúp</a></li>
-                                <li><a class="dropdown-item" href="#">Cài đặt</a></li>
-                                <li><a class="dropdown-item" href="ĐN.html">Đăng xuất</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="My_story.html">Tác phẩm của tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Library.html">Thư viện</a>
+                    </li>
+                </ul>
+                <form class="d-flex search-form">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/schwi.png" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 5px;">
+                        <span id="profileName"></span> 
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAccount">
+                        <li><a class="dropdown-item" href="Account.html">Hồ sơ của tôi</a></li>
+                        <li><a class="dropdown-item" href="ĐN.html">Đăng xuất</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container1">
         <!-- Phần hiển thị thông báo -->
         <div id="successMessage" class="alert alert-success" style="display: none;"></div>
         <div id="errorMessage" class="alert alert-danger" style="display: none;"></div>
