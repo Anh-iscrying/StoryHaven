@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url(images/nen.jpg);
+  background-image: url(../images/nen.jpg);
   color: #333;
   line-height: 1.6;
   margin: 0;
@@ -74,7 +74,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/PTTKPM/images/avt10.jpg"); 
+  background-image: url("../images/avt10.jpg"); 
   background-size: cover;
   background-position: center;
   z-index: 0;
