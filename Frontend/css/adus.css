@@ -1,18 +1,68 @@
-/* Reset */
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+
+body, h1,h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
 }
   
-  /* Typography */
 body {
-    font-family: 'Arial', sans-serif; /* Font chữ hiện đại hơn */
+    font-family: 'Arial', sans-serif; 
     line-height: 1.6;
+}
+
+/*Header*/
+header {
+    background-color: rgb(183, 183, 183);
+    color: white;
+    padding: 15px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right h1 {
+    margin-right: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.logout-btn {
+    background-color: #87f5df;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-btn i {
+    margin-right: 5px;
 }
   
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
   
   /* Layout */
@@ -21,12 +71,7 @@ h1 {
     margin: 0 auto;
     overflow: hidden;
 }
-  
-header {
-    padding: 2rem 0;
-    text-align: center;
-}
-  
+   
 aside {
     float: left;
     width: 20%;
@@ -39,13 +84,6 @@ main {
     padding: 1rem;
 }
   
-footer {
-    background-color: var(--secondary-color);
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    clear: both; /* Đảm bảo footer nằm dưới cùng */
-}
   
   /* Components */
   /* Bảng */
@@ -99,17 +137,12 @@ body {
     color: var(--text-color);
 }
   
-header {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-  
 aside {
     background-color: #eee;
 }
   
 #user-table th {
-    background-color: var(--accent-color);
+    background-color: #87f5df;
     color: var(--text-color);
 }
   
@@ -120,18 +153,4 @@ aside {
   
 .search-filter button:hover {
     background-color: #f42a2a; 
-}
-
-.logout-button {
-    background-color: #ef3636; /* Màu đỏ */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px; /* Bo góc */
-    margin-left: 10px; /* Thêm khoảng cách giữa nút đăng ký và đăng xuất */
 }
