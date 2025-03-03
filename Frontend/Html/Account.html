@@ -43,7 +43,7 @@
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="images/schwi.png" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 5px;">
-                                <span id="profileName"><?php echo htmlspecialchars($name); ?></span> <!-- Sử dụng span để cập nhật bằng JS -->
+                                <span id="profileName"></span> 
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAccount">
                                 <li><a class="dropdown-item" href="#">Hồ sơ của tôi</a></li>
@@ -53,7 +53,7 @@
                                 <li><a class="dropdown-item" href="#">Ngôn ngữ: Tiếng Việt</a></li>
                                 <li><a class="dropdown-item" href="#">Trợ giúp</a></li>
                                 <li><a class="dropdown-item" href="#">Cài đặt</a></li>
-                                <li><a class="dropdown-item" href="ĐN.php">Đăng xuất</a></li>
+                                <li><a class="dropdown-item" href="ĐN.html">Đăng xuất</a></li>
                             </ul>
                         </div>
                     </div>
@@ -66,10 +66,10 @@
         <div id="errorMessage" class="alert alert-danger" style="display: none;"></div>
         <section class="profile">
             <div class="profile__background"></div>
-            <div class="profile__avatar"><img src="images/schwi.png" alt="Avatar của <?php echo htmlspecialchars($name); ?>"></div>
+            <div class="profile__avatar"><img src="images/schwi.png" alt="Avatar của "></div>
             <div class="profile__info">
-                <h2 class="profile__name" id="profileFullName"><?php echo htmlspecialchars($name); ?></h2> <!-- Sử dụng span để cập nhật bằng JS -->
-                <p class="profile__username">@<span id="profileUsername"><?php echo htmlspecialchars($user); ?></span></p> <!-- Sử dụng span để cập nhật bằng JS -->
+                <h2 class="profile__name" id="profileFullName"></h2> 
+                <p class="profile__username">@<span id="profileUsername"></span></p> 
                 <div class="profile__stats">
                     <span><i class="fa fa-book"></i> 0 Tác phẩm</span>
                     <span><i class="fa fa-user-friends"></i> 1 Người theo dõi</span>
@@ -101,7 +101,7 @@
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3>Truyện của <span id="storyName"><?php echo htmlspecialchars($name); ?></span> <i class="fas fa-cog float-end"></i></h3> <!-- Sử dụng span để cập nhật bằng JS -->
+                                    <h3>Truyện của <span id="storyName"></span> <i class="fas fa-cog float-end"></i></h3> <!-- Sử dụng span để cập nhật bằng JS -->
                                     <p class="text-muted">0 Truyện đã Đăng • 3 Bản thảo (chỉ hiển thị với bạn)</p>
                                 </div>
                                 <div class="work-list">
