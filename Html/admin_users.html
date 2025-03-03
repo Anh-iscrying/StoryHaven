@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Quản lý tài khoản người dùng</title>
+  <link rel="stylesheet" href="css/adus.css">
+  
+</head>
+<body>
+  <div class="container">
+    <header>
+        <div>
+        
+        <img src="images/bookhaven.jpg" alt="Logo" height="50">
+      </div>
+    </header>
+
+    <aside>
+      <!-- Menu điều hướng bên trái -->
+    </aside>
+
+    <main>
+      <h1>Quản lý tài khoản người dùng</h1>
+
+      <div class="search-filter">
+        <input type="text" id="search-input" placeholder="Tìm kiếm...">
+        <select id="status-filter">
+          <option value="">Tất cả trạng thái</option>
+          <option value="active">Đã kích hoạt</option>
+          <option value="inactive">Chưa kích hoạt</option>
+          <option value="blocked">Bị khóa</option>
+        </select>
+        <select id="sex-filter">
+          <option value="">Tất cả giới tính</option>
+          <option value="male">Nam</option>
+          <option value="female">Nữ</option>
+          <option value="other">Khác</option>
+        </select>
+        <button onclick="searchAndFilter()">Tìm kiếm</button>
+      </div>
+
+      <table id="user-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Giới tính</th>
+            <th>Email</th>
+            <th>Điện thoại</th>
+            <th>Tên đăng nhập</th>
+            <th>Vai trò</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+           
+          ?>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <!-- Phân trang -->
+      </div>
+    </main>
+
+    <footer>
+    <?php if (isset($_SESSION['user_id'])): ?>
+        <a href="ĐN.php" class="logout-button">Đăng xuất</a>
+      <?php endif; ?>
+    </footer>
+  </div>
+
+  <script src="javascript/admin_users.js"></script>
+</body>
+</html>
