@@ -3,10 +3,8 @@ $mysqli = new mysqli("localhost", "root", "", "webbansach");
 
 // Check connection
 if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
-    exit();
+    header('Content-Type: application/json'); // Quan trọng: Đặt header
+    echo json_encode(['success' => false, 'message' => "Failed to connect to MySQL: " . $mysqli->connect_error]);
+    exit(); // Kết thúc script
 }
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 ?>

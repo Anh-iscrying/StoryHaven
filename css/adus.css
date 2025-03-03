@@ -88,7 +88,7 @@ footer {
   
 :root {
     --primary-color: #f05858; 
-    --secondary-color: #b89aec; 
+    --secondary-color: #d1c0ee; 
     --accent-color: #46f6c7; 
     --text-color: #333;
     --bg-color: #f8f8f8;
@@ -101,11 +101,6 @@ body {
   
 header {
     background-color: var(--primary-color);
-    color: #fff;
-}
-  
-footer {
-    background-color: var(--secondary-color);
     color: #fff;
 }
   
@@ -125,4 +120,18 @@ aside {
   
 .search-filter button:hover {
     background-color: #f42a2a; 
+}
+
+.logout-button {
+    background-color: #ef3636; /* Màu đỏ */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Bo góc */
+    margin-left: 10px; /* Thêm khoảng cách giữa nút đăng ký và đăng xuất */
 }

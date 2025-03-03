@@ -1,14 +1,21 @@
+<?php
+session_start(); // **QUAN TRỌNG: Thêm dòng này vào đầu file!**
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Admin - Quản lý tài khoản người dùng</title>
-  <link rel="stylesheet" href="/PTTKPM/css/adus.css">
+  <link rel="stylesheet" href="css/adus.css">
   
 </head>
 <body>
   <div class="container">
     <header>
-      <!-- Logo, Thông tin admin, Menu -->
+        <div>
+        
+        <img src="images/bookhaven.jpg" alt="Logo" height="50">
+      </div>
     </header>
 
     <aside>
@@ -60,7 +67,7 @@
 
             // Truy vấn lấy dữ liệu người dùng
             $sql = "SELECT id, name, sex, email, phone, user, role FROM tbl_user";
-            //echo "SQL: " . $sql . "<br>"; // In truy vấn SQL (chỉ dùng để debug)
+           
 
             $result = $mysqli->query($sql);
 
@@ -70,13 +77,12 @@
             }
 
             if ($result->num_rows > 0) {
-              // Lặp qua từng dòng dữ liệu và hiển thị
               while($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($row["id"]) . "</td>";
-                echo "<td>" . htmlspecialchars($row["name"] ?? '') . "</td>"; // Xử lý NULL
-                echo "<td>" . htmlspecialchars($row["sex"] ?? '') . "</td>";  // Xử lý NULL
-                echo "<td>" . htmlspecialchars($row["email"] ?? '') . "</td>"; // Xử lý NULL
+                echo "<td>" . htmlspecialchars($row["name"] ?? '') . "</td>"; 
+                echo "<td>" . htmlspecialchars($row["sex"] ?? '') . "</td>";  
+                echo "<td>" . htmlspecialchars($row["email"] ?? '') . "</td>"; 
                 echo "<td>" . htmlspecialchars($row["phone"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["user"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["role"]) . "</td>";
@@ -102,20 +108,37 @@
     </main>
 
     <footer>
-      <!-- Bản quyền, Thông tin footer -->
+    <?php if (isset($_SESSION['user_id'])): ?>
+        <a href="ĐN.php" class="logout-button">Đăng xuất</a>
+      <?php endif; ?>
     </footer>
   </div>
 
   <script>
-    // Các hàm Javascript (viewUser, editUser, toggleBlockUser, searchAndFilter)
-    // Sẽ được điều chỉnh để gọi các file PHP xử lý thao tác (sử dụng AJAX)
-
+  
     function viewUser(userId) {
         window.location.href = `Account.php?id=${userId}`;
     }
 
     function toggleBlockUser(userId) {
-      alert(`Khóa/Mở khóa tài khoản của người dùng có ID ${userId}`);
+      fetch(`toggle_block_user.php?id=${userId}`) 
+        .then(response => response.json()) 
+        .then(data => {
+          if (data.success) {
+            // Cập nhật giao diện người dùng sau khi thành công
+            alert(data.message); // Hiển thị thông báo thành công
+
+            // Tải lại bảng người dùng để hiển thị trạng thái mới (tùy chọn)
+            searchAndFilter();  
+
+          } else {
+            alert(data.message); // Hiển thị thông báo lỗi
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi:', error);
+          alert('Có lỗi xảy ra khi thực hiện thao tác.'); // Thông báo lỗi chung
+        });
     }
 
     function searchAndFilter() {

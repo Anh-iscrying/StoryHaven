@@ -7,8 +7,8 @@ if (isset($_POST['login'])) {
     $user = $_POST['user']; // Người dùng nhập email hoặc tên
     $pass = $_POST['pass']; // Mật khẩu nhập vào
 
-    // Truy vấn để lấy mật khẩu đã lưu và vai trò
-    $sql = "SELECT id, pass, role FROM tbl_user WHERE email = ? OR user = ?";
+    // Truy vấn để lấy mật khẩu đã lưu, vai trò VÀ trạng thái
+    $sql = "SELECT id, pass, role, status FROM tbl_user WHERE email = ? OR user = ?";
     $stmt = $mysqli->prepare($sql);
 
     if (!$stmt) { // Kiểm tra xem prepare() có thành công không
@@ -20,22 +20,27 @@ if (isset($_POST['login'])) {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $storedPassword, $role);
+        $stmt->bind_result($id, $storedPassword, $role, $status); // Thêm $status vào bind_result
         $stmt->fetch();
 
-        // So sánh mật khẩu nhập vào với mật khẩu đã lưu
-        if ($pass === $storedPassword) {
-            $_SESSION['user_id'] = $id; // Lưu ID người dùng vào session
-
-            if ($role == 1) {
-                header("Location: admin_users.php"); // Giao diện cho role 1
-                exit;
-            } else {
-                header("Location: Account.php"); // Giao diện cho role 0
-                exit;
-            }
+        // Kiểm tra trạng thái tài khoản trước khi so sánh mật khẩu
+        if ($status == 'blocked') {
+            echo "Tài khoản của bạn đã bị khóa. Vui lòng liên hệ với quản trị viên.";
         } else {
-            echo "Mật khẩu không chính xác.";
+            // So sánh mật khẩu nhập vào với mật khẩu đã lưu
+            if ($pass === $storedPassword) {
+                $_SESSION['user_id'] = $id; // Lưu ID người dùng vào session
+
+                if ($role == 1) {
+                    header("Location: admin_users.php"); // Giao diện cho role 1
+                    exit;
+                } else {
+                    header("Location: Account.php"); // Giao diện cho role 0
+                    exit;
+                }
+            } else {
+                echo "Mật khẩu không chính xác.";
+            }
         }
     } else {
         echo "Người dùng không tồn tại.";
