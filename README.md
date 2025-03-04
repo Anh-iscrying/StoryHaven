@@ -16,13 +16,9 @@ Chúng tôi nhận thấy nhu cầu đọc truyện trực tuyến ngày càng t
 
 3. Khuyến khích sáng tạo và giao lưu cộng đồng: độc giả có thể viết và chia sẻ truyện của mình với cộng đồng.
 
-4. Cung cấp trải nghiệm đọc truyện liền mạch, không quảng cáo gây phiền nhiễu.
-
 ## Tính mới, tính sáng tạo
 
-Cá nhân hóa nội dung: Hệ thống đề xuất truyện dựa trên lịch sử đọc và đánh giá của người dùng.
-
-Chế độ đọc thông minh: Hỗ trợ điều chỉnh kích thước chữ, màu nền, và chế độ đọc ban đêm.
+Cá nhân hóa nội dung: Hệ thống đề xuất truyện dựa trên lịch sử đọc và đánh giá của người dùng..
 
 Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải truyện, nhận phản hồi, và xây dựng cộng đồng độc giả riêng.
 
@@ -50,21 +46,13 @@ Cộng đồng sáng tác: Tính năng cho phép người dùng đăng tải tru
 
 - Hệ thống đánh giá và bình luận truyện từ người dùng.
 
-3. Chế độ Đọc và Quản lý Nội dung
-
-- Hỗ trợ chế độ đọc trực tuyến và ngoại tuyến.
-
-- Tùy chỉnh trải nghiệm đọc: kích thước chữ, font chữ, chế độ nền sáng/tối.
-
-- Hiển thị tiến độ đọc và chương tiếp theo.
-
-4. Cộng đồng và Sáng tạo Nội dung
+3. Cộng đồng và Sáng tạo Nội dung
 
 - Người dùng có thể tự viết và đăng truyện.
 
 - Hệ thống đánh giá và bình luận để tương tác với các tác giả.
 
-5. Quản trị viên (Admin)
+4. Quản trị viên (Admin)
 
 - Quản lý danh mục truyện, người dùng.
 
