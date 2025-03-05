@@ -89,7 +89,9 @@ const apiController = {
     getChapter: (req, res) => {
         const chapterId = req.params.id;
         Chapter.getById(chapterId, (err, chapterResult) => {
-            if (err || !chapterResult[0]) return res.status(404).json({ error: 'Chapter not found' });
+            if (err || !chapterResult[0]) {
+                return res.status(404).end();  // Không trả về gì cả (body rỗng)
+            }
             res.status(200).json(chapterResult[0]);
         });
     },

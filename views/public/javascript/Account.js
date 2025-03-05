@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
             profileFullName.textContent = data.username;
             profileUsername.textContent = data.username;
             storyNameElement.textContent = data.username;
+            document.getElementById("name").value = data.username;
+            document.getElementById("email").value = data.email;
+            document.getElementById("phone").value = data.phonenumber;
 
             fetchStories(); // Fetch stories after getting user info
         })

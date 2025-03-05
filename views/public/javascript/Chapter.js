@@ -239,6 +239,7 @@ const fillContentChapter = (chapter) => {
 const fillStoryChapterData = (story, chapter) => {
    
     document.title = `${story.title}`;
+    
 
     const storyNameElement = document.querySelector(".story-name a");
     if (storyNameElement) {
@@ -281,7 +282,74 @@ const fillStoryChapterData = (story, chapter) => {
             });
     
             chapterListContainer.appendChild(chapLink);
+            
         });
     }
     
 };
+
+
+
+
+    // Lấy currentChapter và storyId từ URL
+    function getCurrentChapterAndStory() {
+        const parts = window.location.pathname.split('/');
+        const storyId = parts[2];    // /story/6/chapter/7 => storyId = 6
+        const chapterId = parts[4];  // /story/6/chapter/7 => chapterId = 7
+        return { storyId, chapterId };
+    }
+
+    // Gọi API kiểm tra chapter tồn tại
+    function checkChapterExists(chapterId, callback) {
+        fetch(`/api/chapter/${chapterId}`)
+            .then(response => {
+                if (response.status === 404) {
+                    callback(false);  // Không tồn tại
+                } else if (response.ok) {
+                    callback(true);   // Tồn tại
+                } else {
+                    callback(false);  // Lỗi khác
+                }
+            })
+            .catch(() => callback(false)); // Bắt lỗi mạng
+    }
+
+    // Cập nhật link nếu chapter hợp lệ
+    function setChapterLinks() {
+        const { storyId, chapterId } = getCurrentChapterAndStory();
+        const currentChapter = parseInt(chapterId, 10);
+
+        const beforeChapter = currentChapter - 1;
+        const afterChapter = currentChapter + 1;
+
+        // Kiểm tra chương trước
+        checkChapterExists(beforeChapter, (beforeExists) => {
+            if (beforeExists) {
+                document.getElementById('before').href = `/story/${storyId}/chapter/${beforeChapter}`;
+            }
+        });
+
+        // Kiểm tra chương sau
+        checkChapterExists(afterChapter, (afterExists) => {
+            if (afterExists) {
+                document.getElementById('after').href = `/story/${storyId}/chapter/${afterChapter}`;
+            }
+        });
+    }
+
+    // Gọi khi trang load
+    setChapterLinks();
+
+    // Xử lý khi click nút
+    function backChapter() {
+        const link = document.getElementById('before').href;
+        if (link && link !== '#') window.location.href = link;
+    }
+
+    function nextChapter() {
+        const link = document.getElementById('after').href;
+        if (link && link !== '#') window.location.href = link;
+    }
+
+
+
