@@ -5,15 +5,23 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+h1,h2 {
+    font-weight: 400;
+    font-style: normal;
+
 }
 
+#container1 {
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 70px;
+    margin-bottom: 5px;
+    width: 90%;
+    overflow: hidden;
+}
+
+   
 .story-card {
     margin-top: 20px;
     padding: 20px;
@@ -40,3 +48,103 @@ body {
     height: 150px;
     object-fit: cover;
 }
+#storyList{
+    background-color: red;
+}
+
+
+.list-group-item,.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-group-item:hover ,.card:hover {
+    transform: translateY(-5px); /* Nổi lên 5px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn */
+} 
+body .navbar {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+  }
+  
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+    .pagination button {
+        border: 1px solid #ddd;
+        color: black;
+        padding: 8px 16px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+  .pagination button:hover{
+    background-color: whitesmoke;
+  }
+
+
+  .editor-pick {
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+
+.hot-story {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 0.8); /* Đỏ */
+    animation: rainbowGlow 5s infinite alternate;
+    
+}
+@keyframes rainbowGlow {
+    0% { box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 0.7); }   /* Đỏ */
+    14% { box-shadow: 0px 0px 15px 5px rgba(255, 165, 0, 0.7); } /* Cam */
+    28% { box-shadow: 0px 0px 15px 5px rgba(255, 255, 0, 0.7); } /* Vàng */
+    42% { box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.7); }   /* Lục */
+    57% { box-shadow: 0px 0px 15px 5px rgba(0, 255, 255, 0.7); } /* Lam */
+    71% { box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.7); }   /* Chàm */
+    85% { box-shadow: 0px 0px 15px 5px rgba(128, 0, 128, 0.7); } /* Tím */
+    100% { box-shadow: 0px 0px 15px 5px rgba(255, 0, 0, 0.7); }  /* Quay lại Đỏ */
+}
+.editor{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer .footer-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.story-list{
+    font-weight: bold;
+    font-size: large;
+}
+

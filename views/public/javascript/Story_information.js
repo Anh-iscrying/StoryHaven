@@ -65,6 +65,10 @@ function fillStoryData(story, chapters) {
         `;
         
         chapterListContainer.appendChild(chapItem);
+
     });
-    
+    if (chapters.length > 0) {
+        const firstChapterId = chapters[0].id;
+        document.querySelector(".btn-read").href = `/story/${story.id}/chapter/${firstChapterId}`;
+    }
 }

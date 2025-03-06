@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const apiController = require('../controllers/apiController');
 const multer = require('multer');
+const connection = require('../configs/mysqlConnect');
 
 // Cấu hình multer
 const storage = multer.diskStorage({
@@ -38,5 +39,41 @@ router.post('/register', apiController.register);
 router.post('/login', apiController.login);
 router.post('/logout', authMiddleware, apiController.logout);
 
+
+router.get('/stories', (req, res) => {
+    connection.query('SELECT * FROM stories', (err, results) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Database query error' });
+        }
+        res.json(results);
+    });
+});
+
+router.get('/stories', (req, res) => {
+    const page = parseInt(req.query.page) || 1;  // Trang hiện tại (mặc định là 1)
+    const limit = parseInt(req.query.limit) || 5; // Số truyện mỗi trang (mặc định 5)
+    const offset = (page - 1) * limit;
+
+    const query = `SELECT * FROM stories LIMIT ? OFFSET ?`; 
+    connection.query(query, [limit, offset], (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+
+        connection.query(`SELECT COUNT(*) AS total FROM stories`, (err, countResult) => {
+            if (err) return res.status(500).json({ error: err.message });
+
+            const totalStories = countResult[0].total;
+            const totalPages = Math.ceil(totalStories / limit);
+
+            res.json({
+                stories: results,
+                currentPage: page,
+                totalPages: totalPages
+            });
+        });
+    });
+});
 
 module.exports = router;
