@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="../images/Book Haven (3).png" alt="Story Haven">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,42 +34,23 @@
                             Thể loại
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
-                            <li><a class="dropdown-item" href="#">Tiên Hiệp</a></li>
-                            <li><a class="dropdown-item" href="#">Đồng Nhân</a></li>
-                            <li><a class="dropdown-item" href="#">Kỳ Ảo</a></li>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#">Drama</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Bối cảnh thế giới
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
-                            <li><a class="dropdown-item" href="#">Huyền Huyễn</a></li>
-                            <li><a class="dropdown-item" href="#">Trinh Thám</a></li>
-                            <li><a class="dropdown-item" href="#">Dị Giới</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/my-story">Tác phẩm của tôi</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Lưu phái
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
-                            <li><a class="dropdown-item" href="#">Sảng Văn</a></li>
-                            <li><a class="dropdown-item" href="#">Hệ Thống</a></li>
-                            <li><a class="dropdown-item" href="#">Trùng Sinh</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Danh sách
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategory">
-                            <li><a class="dropdown-item" href="#">Truyện Dịch</a></li>
-                            <li><a class="dropdown-item" href="#">Truyện Convert</a></li>
-                            <li><a class="dropdown-item" href="#">Truyện Hot</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/library">Thư viện</a>
                     </li>
                 </ul>
+                
+                <form class="d-flex search-form">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm truyện...">
+                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
                 <div class="nav-item dropdown">
                     <div>
                         <a href="/register" class="btn btn-primary">Đăng ký</a>
@@ -79,26 +60,14 @@
             </div>
         </div>
     </nav>
-    <div class="container" id="container1">             
-        <div class="search-box mb-3 d-flex">
-            <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm truyện...">
-        </div>
-        
 
-        <div class="card story-card">
-            <div class="card-body">
-                <h5 class="card-title">Câu chuyện của bạn</h5>
-                <p class="card-text">Khám phá và tạo ra câu chuyện mới.</p>
-                <a href="/my-story" class="btn btn-success">Truyện của tôi</a>
-            </div>
+    <div class="container related-stories">
+        <h2>Danh sách truyện</h2>
+        <div class="row" id="storyContainer">
+            <!-- Danh sách truyện sẽ được hiển thị ở đây -->
         </div>
-        
-       
-        <div class="story-list mt-3">
-            <h2>Danh sách truyện</h2>
-            <ul id="storyList" class="list-group">
-            </ul>
-        </div>
+    </div>
+
         <div class="pagination">
             <button id="prev-btn">Trang Trước</button>
             <span id="page-info"></span>

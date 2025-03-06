@@ -72,9 +72,9 @@ async function saveChapter() {
         }
 
         alert('Lưu chương thành công!');
-        // Optionally, redirect or update the UI
     } catch (error) {
         console.error('Error saving chapter:', error);
-        alert('Lỗi khi lưu chương: ' + error.message); // Thêm thông tin lỗi cụ thể
+        alert('Lỗi khi lưu chương: ' + error.message); 
     }
 }
+

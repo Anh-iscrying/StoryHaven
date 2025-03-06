@@ -111,7 +111,7 @@ const apiController = {
         db.query(sql, [chapterId], (err, result) => {
             if (err) {
                 console.error("Error deleting chapter:", err);
-                return res.status(500).json({ error: "Lỗi server: " + err.message }); // Thêm chi tiết lỗi
+                return res.status(500).json({ error: "Lỗi server: " + err.message });
             }
     
             if (result.affectedRows === 0) {
