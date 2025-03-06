@@ -168,6 +168,8 @@ function createReplyElement(replyText) {
 }
 let CHAPTERCURRENT = 0;
 let STORYID = 0;
+let BACKCHAPTER = 0;
+let NEXTCHAPTER = 0;
 document.addEventListener("DOMContentLoaded", function () {
     const pathSegments = window.location.pathname.split("/");
 
@@ -181,18 +183,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-// const backChapter = () => {
+const backChapter = () => {
 
-//     if (CHAPTERCURRENT == 1) {
-//         alert("Chương truyện đầu tiên");
-//         return;
-//     }
-//     fetchStoryChapterData(STORYID, CHAPTERCURRENT - 1);
-// }
+    if (CHAPTERCURRENT == 1) {
+        alert("Chương truyện đầu tiên");
+        return;
+    }
+    fetchStoryChapterData(STORYID, BACKCHAPTER);
+}
 
-// const nextChapter = () => {
-//     fetchStoryChapterData(STORYID, CHAPTERCURRENT + 1);
-// }
+const nextChapter = () => {
+    fetchStoryChapterData(STORYID, NEXTCHAPTER);
+}
 
 
 const fetchStoryChapterData = (storyId, chapterId) => {
@@ -215,10 +217,22 @@ const fetchStoryChapterData = (storyId, chapterId) => {
                 return;
             }
             fillStoryChapterData(data.story, data.chapters);
+            setBackNextChapter(data.chapters);
         })
         .catch(error => console.error("Lỗi khi lấy dữ liệu:", error));
 };
-
+const setBackNextChapter = (chapters) => {
+    chapters.forEach((chapter, index) => {
+        if (chapter.id == CHAPTERCURRENT) {
+            if (index > 0) {
+                BACKCHAPTER = chapters[index - 1].id;
+            }
+            if (index < chapters.length - 1) {
+                NEXTCHAPTER = chapters[index + 1].id;
+            }
+        }
+    });
+}
 
 const fillContentChapter = (chapter) => {
     const chapterTitleElement = document.querySelector(".tieu-de");
@@ -239,7 +253,6 @@ const fillContentChapter = (chapter) => {
 const fillStoryChapterData = (story, chapter) => {
    
     document.title = `${story.title}`;
-    
 
     const storyNameElement = document.querySelector(".story-name a");
     if (storyNameElement) {
@@ -282,74 +295,7 @@ const fillStoryChapterData = (story, chapter) => {
             });
     
             chapterListContainer.appendChild(chapLink);
-            
         });
     }
     
 };
-
-
-
-
-    // Lấy currentChapter và storyId từ URL
-    function getCurrentChapterAndStory() {
-        const parts = window.location.pathname.split('/');
-        const storyId = parts[2];    // /story/6/chapter/7 => storyId = 6
-        const chapterId = parts[4];  // /story/6/chapter/7 => chapterId = 7
-        return { storyId, chapterId };
-    }
-
-    // Gọi API kiểm tra chapter tồn tại
-    function checkChapterExists(chapterId, callback) {
-        fetch(`/api/chapter/${chapterId}`)
-            .then(response => {
-                if (response.status === 404) {
-                    callback(false);  // Không tồn tại
-                } else if (response.ok) {
-                    callback(true);   // Tồn tại
-                } else {
-                    callback(false);  // Lỗi khác
-                }
-            })
-            .catch(() => callback(false)); // Bắt lỗi mạng
-    }
-
-    // Cập nhật link nếu chapter hợp lệ
-    function setChapterLinks() {
-        const { storyId, chapterId } = getCurrentChapterAndStory();
-        const currentChapter = parseInt(chapterId, 10);
-
-        const beforeChapter = currentChapter - 1;
-        const afterChapter = currentChapter + 1;
-
-        // Kiểm tra chương trước
-        checkChapterExists(beforeChapter, (beforeExists) => {
-            if (beforeExists) {
-                document.getElementById('before').href = `/story/${storyId}/chapter/${beforeChapter}`;
-            }
-        });
-
-        // Kiểm tra chương sau
-        checkChapterExists(afterChapter, (afterExists) => {
-            if (afterExists) {
-                document.getElementById('after').href = `/story/${storyId}/chapter/${afterChapter}`;
-            }
-        });
-    }
-
-    // Gọi khi trang load
-    setChapterLinks();
-
-    // Xử lý khi click nút
-    function backChapter() {
-        const link = document.getElementById('before').href;
-        if (link && link !== '#') window.location.href = link;
-    }
-
-    function nextChapter() {
-        const link = document.getElementById('after').href;
-        if (link && link !== '#') window.location.href = link;
-    }
-
-
-
