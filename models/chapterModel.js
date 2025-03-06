@@ -31,6 +31,28 @@ const Chapter = {
             chapterData.chapter_number || 1
         ], callback);
     }, 
+    update: (id, chapterData, callback) => {
+        console.log('Chapter.update:', { id, chapterData }); // Log giá trị
+    
+        const sql = `
+            UPDATE chapters 
+            SET title = ?, content = ?, chapter_number = ? 
+            WHERE id = ?
+        `;
+        db.query(sql, [
+            chapterData.title,
+            chapterData.content,
+            parseInt(chapterData.chapter_number), 
+            id
+        ], (err, result) => {
+            if (err) {
+                console.error('Error updating chapter in database:', err);
+                return callback(err);
+            }
+            console.log('Chapter update result:', result);
+            callback(null, result); 
+        });
+    },
     getChapterNumber : (storyId, callback) => {
         const sql = `
             SELECT MAX(chapter_number) AS maxChapterNumber 

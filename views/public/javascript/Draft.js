@@ -58,10 +58,5 @@ async function saveStory() {
     }
 }
 
-//Nút đăng tải
-function uploadStory() {
-    const storyTitle = document.getElementById('story-title').innerText;
-    const storyContent = document.querySelector('.story-editor').innerText;
-    alert("Bạn đã đăng tải thành công!");
-}
+
 

@@ -30,6 +30,8 @@ router.post('/chapter/new', authMiddleware, apiController.createChapter);
 router.get('/chapter/:id', apiController.getChapter);
 router.get('/chapters/max', apiController.getMaxPageChapter);
 router.get('/user/account-info', authMiddleware, apiController.getAccountInfo);
+router.put('/chapter/:id', authMiddleware, apiController.updateChapter);
+router.delete('/chapter/:id', authMiddleware, apiController.deleteChapter);
 
 // User routes
 router.post('/register', apiController.register);

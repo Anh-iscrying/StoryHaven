@@ -34,6 +34,9 @@ const storyController = {
     getAccount: (req, res) => {
         res.sendFile(path.join(__dirname, '../views/public/html', 'Account.html'));
     },
+    getEditChapter: (req, res) => {
+        res.sendFile(path.join(__dirname, '../views/public/html', 'editchapter.html'));
+    },
 };
 
 module.exports = storyController;

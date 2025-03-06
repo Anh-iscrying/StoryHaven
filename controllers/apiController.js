@@ -75,6 +75,53 @@ const apiController = {
             res.status(200).json({ success: true, storyId: insertId });
         });
     },
+    updateChapter: async (req, res) => {
+        try {
+            const chapterId = req.params.id;
+            const { title, content, chapter_number } = req.body;
+    
+            console.log('updateChapter:', { chapterId, title, content, chapter_number }); // Log giá trị
+    
+            Chapter.update(chapterId, { title, content, chapter_number }, (err, result) => {
+                if (err) {
+                    console.error('Error updating chapter:', err);
+                    return res.status(500).json({ error: 'Lỗi server: ' + err.message }); // Thêm chi tiết lỗi
+                }
+    
+                if (result.affectedRows === 0) {
+                    return res.status(404).json({ error: 'Không tìm thấy chương để cập nhật' });
+                }
+    
+                res.status(200).json({ success: true, message: 'Chương đã được cập nhật!' });
+            });
+    
+        } catch (error) {
+            console.error('Error updating chapter:', error);
+            res.status(500).json({ error: 'Lỗi server: ' + error.message }); 
+        }
+    },
+    
+    deleteChapter: (req, res) => {
+        const chapterId = req.params.id;
+    
+        console.log('deleteChapter:', { chapterId }); 
+    
+        const sql = 'DELETE FROM chapters WHERE id = ?';
+    
+        db.query(sql, [chapterId], (err, result) => {
+            if (err) {
+                console.error("Error deleting chapter:", err);
+                return res.status(500).json({ error: "Lỗi server: " + err.message }); // Thêm chi tiết lỗi
+            }
+    
+            if (result.affectedRows === 0) {
+                return res.status(404).json({ error: 'Không tìm thấy chương để xóa' });
+            }
+    
+            console.log("Chapter deleted successfully");
+            res.status(200).json({ success: true, message: "Chương đã được xóa thành công!" });
+        });
+    },
     createChapter: (req, res) => {
         if (!req.session.user) return res.status(401).json({ error: 'Unauthorized' });
         const { title, content, chapter_number } = req.body;
@@ -194,6 +241,8 @@ const apiController = {
             res.json(result[0]); // Gửi dữ liệu về frontend
         });
     },
+    
+    
     
     getUsers: (req, res) => { /* ... */ },
     getUser: (req, res) => { /* ... */ },

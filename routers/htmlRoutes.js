@@ -18,5 +18,6 @@ router.get('/my-story', authMiddleware, storyController.getMyStory);
 router.get('/login', storyController.getLogin);
 router.get('/register', storyController.getRegister);
 router.get('/account', storyController.getAccount);
+router.get('/editchapter', authMiddleware, storyController.getEditChapter);
 
 module.exports = router;
