@@ -52,19 +52,26 @@
                     <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
                 </form>
                 <div class="nav-item dropdown">
-                    <div>
-                        <a href="/register" class="btn btn-primary">Đăng ký</a>
-                        <a href="/login" class="btn btn-secondary">Đăng nhập</a>
-                    </div>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/schwi.png" alt="Avatar" class="rounded-circle"
+                            style="width: 30px; height: 30px; margin-right: 5px;">
+                        <span id="profileName"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAccount">
+                        <li><a class="dropdown-item" href="/account">Hồ sơ của tôi</a></li>
+                        <li><a class="dropdown-item" href="/login">Đăng xuất</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </nav>
-
-    <div class="container related-stories">
-        <h2>Danh sách truyện</h2>
-        <div class="row" id="storyContainer">
-            <!-- Danh sách truyện sẽ được hiển thị ở đây -->
+    <div class="box">
+        <div class="container2 related-stories">
+            <h2>Danh sách truyện</h2>
+            <div class="row" id="storyContainer">
+                
+            </div>
         </div>
     </div>
 
